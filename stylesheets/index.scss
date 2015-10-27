@@ -16,14 +16,6 @@ body {
   border: none;
 }
 
-#body-container {
-    height: 400px;
-    margin: 10px;
-    padding:5px;
-    background:blue;
-    color:white;
-}
-
 .section {
   background-color: black;
   height: 100%;
@@ -33,6 +25,14 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
+  .inner-container {
+    height: 600px;
+    margin: 10px;
+    padding:5px;
+    background:blue;
+    color:white;
+  }
 }
 
 

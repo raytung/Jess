@@ -1,0 +1,16 @@
+mixin service_item(name, paragraph, link, link_text, icon_class)
+  .col-md-3.col-sm-6
+    .service-item
+      span.fa-stack.fa-4x
+      i.fa.fa-circle.fa-stack-2x
+      i.fa.fa-stack-1x.text-primary(class='#{icon_class}')
+      h4
+        strong #{name}
+      p #{paragraph}
+      a.btn.btn-light(href="##{link}") #{link_text}
+
+mixin portfolio_item(img_link)
+  .col-md-6
+    .portfolio-item
+      a(href="#")
+        img.img-portfolio.img-responsive(src="#{img_link}")

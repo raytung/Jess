@@ -1,0 +1,92 @@
+include ./mixins.jade
+
+doctype html
+html(lang="en")
+  head
+    include ./metas.jade
+    include ./stylesheets.jade
+    title Title
+  body
+    a#menu-toggle.btn.btn-dark.btn-lg.toggle(href="#")
+      i.fa.fa-bars
+    nav#sidebar-wrapper
+      ul.sidebar-nav
+        a#menu-close.btn-btn-light.btn-lg.pull-right.toggle(href="#")
+          i.fa.fa-times
+        li.sidebar-brand
+          a(href="#top") Jess
+        li
+          a(href="#top") Home
+        li
+          a(href="#about") About
+        li
+          a(href="#services") Services
+        li
+          a(href="#portfolio") Portfolio
+        li
+          a(href="#contact") Contact
+
+    //- Header
+    header#top.header
+      div.text-vertical-center
+        h1 Jess
+        h3 Slogan
+        br/
+        a.btn.btn-dark.btn-lg(href="#about") More
+
+    // Services
+    section#services.services.bg-primary
+      .container
+        .row.text-center
+          .col-lg-10.col-lg-offset-1
+            h2 Our Services
+            hr.small
+            .row
+              +service_item('test', 'testpara', 'testlink', 'link', 'fa-cloud')
+              +service_item('test', 'test', 'testlink', 'link', 'fa-compass')
+              +service_item('test', 'test', 'testlink', 'link', 'fa-flask')
+              +service_item('test', 'test', 'testlink', 'link', 'fa-shield')
+
+    //- <!-- Callout -->
+    aside.callout
+      .text-vertical-center
+         h1 Vertically Centered Text
+
+    //- <!-- Portfolio -->
+    section#portfolio.portfolio
+      .container
+        .row
+          .col-lg-10.col-lg-offset-1.text-center
+            h2 Our Work
+            hr.small
+            .row
+              +portfolio_item('img/portfolio-1.jpg')
+              +portfolio_item('img/portfolio-2.jpg')
+              +portfolio_item('img/portfolio-3.jpg')
+              +portfolio_item('img/portfolio-4.jpg')
+            a.btn.btn-dark(href='#') View More Items
+    //- <!-- Call to Action -->
+    aside.call-to-action.bg-primary
+      .container
+        .row
+          .col-lg-12.text-center
+            h3 The buttons below are impossible to resist.
+            a.btn.btn-lg.btn-light(href='#') Click Me!
+            a.btn.btn-lg.btn-dark(href='#') Look at Me!
+    //- <!-- Map -->
+    section#contact.map
+        iframe(width="100%", height="100%", frameborder="0", scrolling="no", marginheight="0", marginwidth="0", src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed")
+        br/
+        small
+          a(href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A")
+
+    //- <!-- Footer -->
+    footer
+      include ./footer.jade
+    //- <!-- jQuery -->
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.2.2/js/vendor/jquery.min.js")
+
+    //- <!-- Bootstrap Core JavaScript -->
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.2.2/css/vendor/bootstrap.min.css")
+    script(src='../node_modules/webcamjs/webcam.min.js')
+    script(src='javascripts/index.js')
