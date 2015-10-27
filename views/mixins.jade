@@ -1,9 +1,7 @@
 mixin service_item(name, paragraph, link, link_text, icon_class)
-  .col-md-3.col-sm-6
+  .col-md-4.col-sm-6
     .service-item
-      span.fa-stack.fa-4x
-      i.fa.fa-circle.fa-stack-2x
-      i.fa.fa-stack-1x.text-primary(class='#{icon_class}')
+      img.img-rounded(src="...", alt="...")
       h4
         strong #{name}
       p #{paragraph}
