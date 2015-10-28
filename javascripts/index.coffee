@@ -1,11 +1,14 @@
 $(document).ready ->
-  # Webcam.set(
-  #   width: 320,
-  #   height: 240,
-  #   image_format: 'jpeg',
-  #   jpeg_quality: 90
-  # )
-  # Webcam.attach('#camera')
+  Webcam.set(
+    width: 1280
+    height: 500
+    flip_horiz: true
+  )
+  Webcam.attach('#webcam')
+  height = $(window).height()
+  width  = $(window).width()
+  $('#webcam').css('width', width).css('height', height)
+  $('video').css('width', width).css('height', height)
   $("#menu-close").click (e) ->
     e.preventDefault()
     $("#sidebar-wrapper").toggleClass("active")

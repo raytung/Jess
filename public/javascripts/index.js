@@ -1,5 +1,16 @@
 (function() {
   $(document).ready(function() {
+    var height, width;
+    Webcam.set({
+      width: 1280,
+      height: 500,
+      flip_horiz: true
+    });
+    Webcam.attach('#webcam');
+    height = $(window).height();
+    width = $(window).width();
+    $('#webcam').css('width', width).css('height', height);
+    $('video').css('width', width).css('height', height);
     $("#menu-close").click(function(e) {
       e.preventDefault();
       return $("#sidebar-wrapper").toggleClass("active");

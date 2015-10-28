@@ -29,4 +29,24 @@ body {
     background: blue;
     color: white; }
 
+.div-overlay-container {
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 100%; }
+  .div-overlay-container .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .div-overlay-container .overlay.toplayer {
+      z-index: 3; }
+    .div-overlay-container .overlay.middlelayer {
+      z-index: 2;
+      background-color: #AA2567;
+      opacity: 0.8; }
+    .div-overlay-container .overlay.bottomlayer {
+      z-index: 1; }
+
 /*# sourceMappingURL=index.css.map */

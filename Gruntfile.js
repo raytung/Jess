@@ -84,6 +84,14 @@ module.exports = function(grunt) {
           'public/javascripts/index.js': 'javascripts/index.coffee'
         }
       }
+    },
+    connect: {
+      server: {
+        options: {
+          port: 3000,
+          base: 'public'
+        }
+      }
     }
   });
 
@@ -92,8 +100,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jade');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-coffee');
+  grunt.loadNpmTasks('grunt-contrib-connect');
 
   // Default task.
-  grunt.registerTask('default', ['jade', 'sass', 'coffee', 'watch']);
+  grunt.registerTask('default', ['jade', 'sass', 'coffee', 'connect', 'watch']);
 
 };
