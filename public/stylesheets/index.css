@@ -66,4 +66,11 @@ body {
   .bounce a {
     color: #fff; }
 
+#bio {
+  height: 650px;
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-top: 60px;
+  padding-bottom: 60px; }
+
 /*# sourceMappingURL=index.css.map */
