@@ -1,6 +1,7 @@
 // COLOURS
 $PRIMARY: #AA2567;
 $TERTIARY: #FFF;
+@import url(https://fonts.googleapis.com/css?family=Stalemate);
 
 html,
 body {
@@ -39,6 +40,7 @@ body {
   }
 }
 
+
 .div-overlay-container {
   display: table;
   position: relative;
@@ -64,5 +66,32 @@ body {
   }
 }
 
+#top {
+  color: $TERTIARY;
+  font-family: 'Stalemate', cursive;
+  h1 {
+    font-weight: 100 !important;
+  }
+}
+
 
 // Bootstrap override
+.bounce {
+  position:absolute;
+  z-index: 100;
+  left:50%;
+  bottom:20px;
+  margin-top:-25px;
+  margin-left:-25px;
+  // -webkit-animation:bounce 1s infinite;
+  a {
+    color: #fff;
+  }
+}
+
+// @-webkit-keyframes bounce {
+//   0%       { bottom:5px; }
+//   25%, 75% { bottom:15px; }
+//   50%      { bottom:20px; }
+//   100%     {bottom:0;}
+// }

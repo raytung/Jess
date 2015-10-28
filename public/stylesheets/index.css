@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Stalemate);
 html,
 body {
   margin: 0;
@@ -48,5 +49,21 @@ body {
       opacity: 0.8; }
     .div-overlay-container .overlay.bottomlayer {
       z-index: 1; }
+
+#top {
+  color: #FFF;
+  font-family: 'Stalemate', cursive; }
+  #top h1 {
+    font-weight: 100 !important; }
+
+.bounce {
+  position: absolute;
+  z-index: 100;
+  left: 50%;
+  bottom: 20px;
+  margin-top: -25px;
+  margin-left: -25px; }
+  .bounce a {
+    color: #fff; }
 
 /*# sourceMappingURL=index.css.map */

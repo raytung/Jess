@@ -9,15 +9,16 @@ html(lang="en")
   body
 
 
+    .bounce
+      a(href="#services")
+        .glyphicon.glyphicon-chevron-down
     //- Header
     .div-overlay-container
       header#top.header.overlay.toplayer
         include ./nav.jade
-        div.text-vertical-center
-          h1 Logo
-          h3 Sing it like you mean it.
+        .text-vertical-center
+          h1 Sing it like you mean it.
           br/
-          a.btn.btn-dark.btn-lg(href="#about") More
       .overlay.middlelayer
       .overlay.bottomlayer#webcam
 
