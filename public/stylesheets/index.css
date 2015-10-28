@@ -51,9 +51,9 @@ body {
       z-index: 1; }
 
 #top {
-  color: #FFF;
-  font-family: 'Stalemate', cursive; }
+  color: #FFF; }
   #top h1 {
+    font-family: 'Stalemate', cursive;
     font-weight: 100 !important; }
 
 .bounce {
