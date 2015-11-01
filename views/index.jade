@@ -5,10 +5,8 @@ html(lang="en")
   head
     include ./metas.jade
     include ./stylesheets.jade
-    title Title
+    title Jess Sing Studio
   body
-
-
     .bounce
       a(href="#services")
         .glyphicon.glyphicon-chevron-down
@@ -23,61 +21,68 @@ html(lang="en")
       .overlay.bottomlayer#webcam
       
     //- <!-- Callout -->
-    aside.callout#bio
-      .col-xs-12.col-md-6
-        div(style='width: 100%; height: 530px; background: red')
-          h1(style='font-size: 80px;') Bio/About
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur diam arcu, mattis sed consequat vitae, porttitor quis mi. Duis pretium felis lorem, ac aliquam nibh convallis non. Aliquam tempus volutpat maximus. Pellentesque in magna lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla libero metus, pellentesque eu justo vitae, vestibulum malesuada dolor. Ut ullamcorper justo eu nibh vestibulum accumsan. Aenean condimentum lectus ut pellentesque ultrices. Suspendisse ut hendrerit orci. Duis eget risus placerat, feugiat eros eu, bibendum dui.
-      .col-xs-12.col-md-offset-2.col-md-4
-        div(style='width: 100%; height: 530px; background: blue')
-          h1 SOME TEXT HEREEEE
+    aside.callout#bio.tertiary-background.primary-color
+      .col-xs-12.col-md-7
+        .description
+          h1 Bio/About
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur diam arcu, mattis sed consequat vitae, porttitor quis mi. Duis pretium felis lorem, ac aliquam nibh convallis non. Aliquam tempus volutpat maximus. Pellentesque in magna lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla libero metus
+      .col-xs-12.col-md-offset-1.col-md-4
+        .photo
+          img.img-circle(style='width: 100%' src='assets/images/profile.jpg')
 
-    // Services
-    section#services.services.bg-primary
-      .container
-        .row.text-center
-          .col-lg-10.col-lg-offset-1
-            h2 Our Services
-            hr.small
-            .row
-              +service_item('test', 'testpara', 'testlink', 'link', 'fa-cloud')
-              +service_item('test', 'test', 'testlink', 'link', 'fa-compass')
-              +service_item('test', 'test', 'testlink', 'link', 'fa-flask')
 
     //- <!-- Portfolio -->
     section#portfolio.portfolio
       .container
         .row
-          .col-lg-10.col-lg-offset-1.text-center
-            h2 Our Work2
+          .col-lg-9.col-lg-offset-3.text-center
+            h2 Samples
+            hr.small
+            iframe(class='samples', width="100%", margin-bottom='15px', height="166", scrolling="no", frameborder="no", src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/171229652&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false")
+            br/
+            iframe(class='samples', width="100%", margin-bottom='15px', height="166", scrolling="no", frameborder="no", src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/112053485&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false")
+            br/
+            iframe(class='smaples', width="100%", margin-bottom='15px', height="166", scrolling="no", frameborder="no", src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/112053485&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false")
+    
+    // Services
+    section#review.services.bg-primary
+      .container
+        .row.text-center
+          .col-lg-10.col-lg-offset-1
+            h2 What my students say
             hr.small
             .row
-              +portfolio_item('img/portfolio-1.jpg')
-              +portfolio_item('img/portfolio-2.jpg')
-              +portfolio_item('img/portfolio-3.jpg')
-              +portfolio_item('img/portfolio-4.jpg')
-            a.btn.btn-dark(href='#') View More Items
-    //- <!-- Call to Action -->
-    aside.call-to-action.bg-primary
-      .container
-        .row
-          .col-lg-12.text-center
-            h3 The buttons below are impossible to resist.
-            a.btn.btn-lg.btn-light(href='#') Click Me!
-            a.btn.btn-lg.btn-dark(href='#') Look at Me!
+              +service_item('test', 'testpara', 'testlink', 'link', 'fa-cloud')
+              +service_item('test', 'test', 'testlink', 'link', 'fa-compass')
+              +service_item('test', 'test', 'testlink', 'link', 'fa-flask')
+            //- .row
+            //-   +portfolio_item('img/portfolio-1.jpg')
+            //-   +portfolio_item('img/portfolio-2.jpg')
+            //-   +portfolio_item('img/portfolio-3.jpg')
+            //-   +portfolio_item('img/portfolio-4.jpg')
+            //- a.btn.btn-dark(href='#') View More Items
+    //- //- <!-- Call to Action -->
+    //- aside.call-to-action.bg-primary
+    //-   .container
+    //-     .row
+    //-       .col-lg-12.text-center
+    //-         h3 The buttons below are impossible to resist.
+    //-         a.btn.btn-lg.btn-light(href='#') Click Me!
+    //-         a.btn.btn-lg.btn-dark(href='#') Look at Me!
     //- <!-- Map -->
     section#contact.map
-        iframe(width="100%", height="100%", frameborder="0", scrolling="no", marginheight="0", marginwidth="0", src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed")
-        br/
-        small
-          a(href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A")
+      #map
+      br/
+      small
+        a(href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A")
 
     //- <!-- Footer -->
-    footer
+    footer.white-background
       include ./footer.jade
     //- <!-- jQuery -->
     script(src="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.2.2/js/vendor/jquery.min.js")
 
     //- <!-- Bootstrap Core JavaScript -->
     script(src='https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.4/webcam.min.js')
+    script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACUSFFoECH7Gdj4obkTskNyKn9e0FZob4&callback=initMap")
     script(src='javascripts/index.js')

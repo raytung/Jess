@@ -1,4 +1,59 @@
 @import url(https://fonts.googleapis.com/css?family=Stalemate);
+@font-face {
+  font-family: ExistenceLight;
+  src: url(../assets/fonts/ExistenceLight.otf) format("opentype"); }
+@font-face {
+  font-family: PrintBold;
+  src: url(../assets/fonts/PrintBold.otf) format("opentype"); }
+@font-face {
+  font-family: PrintClearly;
+  src: url(../assets/fonts/PrintClearly.otf) format("opentype"); }
+@font-face {
+  font-family: Gabriola;
+  src: url(../assets/fonts/Gabriola.ttf); }
+a {
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s; }
+  a:hover {
+    color: #6fcdcb; }
+
+html,
+body,
+p,
+a {
+  font-family: Gabriola;
+  color: #ffdddb; }
+
+.primary-background {
+  background-color: #a34070 !important; }
+
+.secondary-background {
+  background-color: #6fcdcb !important; }
+
+.tertiary-background {
+  background-color: #ffdddb !important; }
+
+.white-background {
+  background-color: #fff !important; }
+
+.primary-color {
+  color: #a34070 !important; }
+
+.secondary-color {
+  color: #6fcdcb !important; }
+
+.tertiary-color {
+  color: #ffdddb !important; }
+
+h1, h2 {
+  font-family: "ExistenceLight"; }
+
+h3, h4 {
+  font-family: "PrintClearly"; }
+
 html,
 body {
   margin: 0;
@@ -45,13 +100,13 @@ body {
       z-index: 3; }
     .div-overlay-container .overlay.middlelayer {
       z-index: 2;
-      background-color: #AA2567;
+      background-color: #fff;
       opacity: 0.8; }
     .div-overlay-container .overlay.bottomlayer {
       z-index: 1; }
 
 #top {
-  color: #FFF; }
+  color: #a34070; }
   #top h1 {
     font-family: 'Stalemate', cursive;
     font-weight: 100 !important; }
@@ -71,6 +126,27 @@ body {
   padding-left: 120px;
   padding-right: 120px;
   padding-top: 60px;
-  padding-bottom: 60px; }
+  padding-bottom: 30px; }
+  #bio .description {
+    width: 100%;
+    min-height: 450px; }
+    #bio .description h1 {
+      font-size: 80px; }
+    #bio .description p {
+      font-size: 30px;
+      color: #a34070; }
+  #bio .photo {
+    width: 100%; }
+
+#map {
+  width: 100%;
+  height: 100%; }
+
+#portfolio {
+  background-image: url(../assets/images/singer.jpg);
+  background-repeat: no-repeat;
+  background-color: #000; }
+  #portfolio .samples {
+    margin-bottom: 50px; }
 
 /*# sourceMappingURL=index.css.map */

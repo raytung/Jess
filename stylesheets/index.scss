@@ -1,7 +1,48 @@
 // COLOURS
-$PRIMARY: #AA2567;
-$TERTIARY: #FFF;
+$PRIMARY-COLOR: rgb(163, 64, 112);
+$SECONDARY-COLOR: rgb(111, 205, 203);
+$TERTIARY-COLOR: rgb(255, 221, 219);
+
 @import url(https://fonts.googleapis.com/css?family=Stalemate);
+@import 'fonts';
+
+$HEADING-FONT: 'ExistenceLight';
+$SUBHEADING-FONT: 'PrintClearly';
+$FONT: 'Gabriola';
+
+
+a {
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+
+  &:hover {
+    color: $SECONDARY-COLOR;
+  }
+}
+
+html,
+body,
+p,
+a {
+  font-family: Gabriola;
+  color: $TERTIARY-COLOR;
+}
+
+.primary-background   { background-color: $PRIMARY-COLOR !important;   }
+.secondary-background { background-color: $SECONDARY-COLOR !important; }
+.tertiary-background { background-color: $TERTIARY-COLOR !important; }
+.white-background { background-color: #fff !important; }
+
+.primary-color { color: $PRIMARY-COLOR !important;     }
+.secondary-color { color: $SECONDARY-COLOR !important; }
+.tertiary-color { color: $TERTIARY-COLOR !important; }
+
+
+h1, h2 { font-family: $HEADING-FONT;    }
+h3, h4 { font-family: $SUBHEADING-FONT; }
 
 html,
 body {
@@ -57,7 +98,7 @@ body {
     }
     &.middlelayer {
       z-index: 2;
-      background-color: $PRIMARY;
+      background-color: #fff;
       opacity: 0.8;
     }
     &.bottomlayer {
@@ -67,7 +108,7 @@ body {
 }
 
 #top {
-  color: $TERTIARY;
+  color: $PRIMARY-COLOR;
   h1 {
     font-family: 'Stalemate', cursive;
     font-weight: 100 !important;
@@ -93,8 +134,34 @@ body {
   height: 650px;
   padding-left: 120px;
   padding-right: 120px;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top:60px;
+  padding-bottom: 30px;
+  .description {
+    width: 100%;
+    min-height: 450px;
+    h1 { font-size: 80px; }
+    p  {
+      font-size: 30px;
+      color: $PRIMARY-COLOR;
+    }
+  }
+  .photo {
+    width: 100%;
+  }
+}
+
+#map {
+  width: 100%;
+  height: 100%
+}
+
+#portfolio {
+  background-image: url(../assets/images/singer.jpg);
+  background-repeat: no-repeat;
+  background-color: #000;
+  .samples {
+    margin-bottom: 50px;
+  }
 }
 
 // @-webkit-keyframes bounce {
